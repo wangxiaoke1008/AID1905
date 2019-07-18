@@ -1,0 +1,51 @@
+练习：
+
+1. 创建数据库 grade
+   create database grade charset=utf8;
+
+2. 数据库中创建表 student
+3. 表字段如下
+   id  name  age  hobby  score  comment
+
+   create table student (id int primary key auto_increment,name varchar(32),age int,hobby set('football','basketball','computer','running'),score float,comment text);
+
+4. 插入若干数据
+   age: 4--16
+   score：0--100
+   hobby:  football  computer  running
+           basketball
+5. 查找
+   * 查找所有年龄不到10岁或者大于14岁的同学
+
+  select * from student where age not between 10 and 14
+
+   * 查找兴趣爱好中包含computer的同学
+   select * from student where find_in_set('computer',hobby);
+
+   * 查找年龄大于等于15 又喜欢足球的同学
+
+
+   * 查找不及格兴趣爱好又不为空的同学
+   select * from student where score<60 and hobby is not null;
+
+   * 查找成绩大于90分的所有同学，只看姓名和成绩
+   select name,score from student where score>90;
+
+
+作业： 1. 熟练MySQL基本语句： 创建数据库，创建数据表
+         插入，查询，修改，删除， 表结构修改
+
+      2. 订单信息 ， 订单历史历史记录
+
+         创建一个数据表，存放外卖的订单信息
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,130 @@
+前情回顾
+
+1. 基础概念
+
+   * 为什么用数据库
+   * 什么是数据库
+   * 数据库简单分类
+        关系型 & 非关系型
+        开源 & 不开源
+        大型 & 中型 & 小型
+
+   * 关系型数据库组织结构
+
+     数据元素-->记录-->数据表-->数据库
+
+     数据库 （database）
+     数据表 （table）
+     字段   （column）
+     记录   （row）
+     主键 ： 不重复不能为空 （primary key）
+
+2. mysql  关系型  开源  c/c++  安装
+
+3. SQL 语句
+
+   * 数据库操作
+
+     show databases;
+     create database [db_name];
+     select database();
+     show create database [db_name];
+     use [db];
+     drop database [db];
+
+   * 数据表
+
+     show tables;
+     create table [tb_name] (column1 type,..)
+
+          * 字段描述
+               primary key
+               unsigned
+               not null
+               default
+
+          * 数据类型
+               数字 （正数，小数，布尔）
+
+               字符串 （char varchar  blob  text
+                       enum  set）
+
+               时间日期
+
+     desc [tb];
+     show create table [tb];
+     drop table [tb]
+
+   * 增删改查
+
+   insert into [tb_name] (column,..) values (val,..)
+
+   delete from [tb] where ...
+
+   update [tb] set ... where ...
+
+   select [col ..] from [tb] where ...
+
+   where子句： 算数  逻辑  比较  位运算
+
+   * 表结构修改
+
+   alter table [tb] add
+                    drop
+                    modify
+                    change
+                    rename
+
+
+ID  用户名  密码  手机号  收货地址  等级  备注
+
+订单号   时间   金额
+
+ID  商家   商品
+
+
+
+公众号 ：  python程序员  python开发者  算法爱好者
+
+app : 掘金
+
+***********************************************
+
+练习 ： 将单词本存入数据库
+
+1. 创建数据库 dict  （utf8）
+2. 创建数据表 words  将单词和单词解释分别存入不同的字段
+3. 将单词存入words单词表  超过 19500 即可
+
+
+文件存储
+   1. 存储文件路径  "/home/tarena/xxxx"
+
+   2. 将文件以二进制存储在数据库
+
+
+练习：
+
+1. 编写一个程序模拟注册和登录的过程
+
+   * 创建一个user表 包含 用户名和密码字段
+     create table user (id int primary key auto_increment,name varchar(32) not null,passwd varchar(32) not null);
+
+
+   * 应用程序中模拟注册和登录功能
+
+     注册则输入用户名密码将用户名密码存入到数据库
+     （用户名不能重复）
+
+     登录则进行数据库比对，如果有该用户则打印登录成功
+     否则让重新输入
+
+
+作业：　整理数据库内容
+　　　　
+　　　　练习没写完　自己写完
+
+
+
+
+
